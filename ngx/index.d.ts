@@ -6,7 +6,7 @@ import { IonicNativePlugin } from '@ionic-native/core';
  *
  * @usage
  * ```typescript
- * import { Zeep } from '@ionic-native/zeep/ngx';
+ * import { Zeep } from '@ionic-native/zeep';
  *
  *
  * constructor(private zeep: Zeep) { }
@@ -14,11 +14,7 @@ import { IonicNativePlugin } from '@ionic-native/core';
  * ...
  *
  *
- * this.zeep.zip('/path', 'filename.zip' , '123')
- *   .then((res: any) => console.log(res))
- *   .catch((error: any) => console.error(error));
- *
- * this.zeep.unzip('filename.zip', '/path' , '123')
+ * this.zeep.functionName('Hello', 123)
  *   .then((res: any) => console.log(res))
  *   .catch((error: any) => console.error(error));
  *
@@ -27,11 +23,8 @@ import { IonicNativePlugin } from '@ionic-native/core';
 export declare class Zeep extends IonicNativePlugin {
     /**
      * This function does something
-     * @param sourceUrl {string} Some param to configure something
-     * @param destZip {string} Some param to configure something
-     * @param sourceZip {string} Some param to configure something
-     * @param destUrl {string} Some param to configure something
-     * @param password {string} Another param to configure something
+     * @param arg1 {string} Some param to configure something
+     * @param arg2 {number} Another param to configure something
      * @return {Promise<any>} Returns a promise that resolves when something happens
      */
     zip(sourceUrl: string, destZip: string, password: string): Promise<any>;
