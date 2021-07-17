@@ -11,13 +11,13 @@ var Zeep = /** @class */ (function (_super) {
     function Zeep() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Zeep.prototype.zip = function (sourceUrl, destZip, password) { return core.cordova(this, "zip", { "successIndex": 2, "errorIndex": 4 }, arguments); };
-    Zeep.prototype.unzip = function (sourceZip, destUrl, password) { return core.cordova(this, "unzip", { "successIndex": 2, "errorIndex": 4 }, arguments); };
+    Zeep.prototype.zip = function (config) { return core.cordova(this, "zip", { "successIndex": 2, "errorIndex": 3 }, arguments); };
+    Zeep.prototype.unzip = function (config) { return core.cordova(this, "unzip", { "successIndex": 2, "errorIndex": 3 }, arguments); };
     Zeep.pluginName = "Zeep";
     Zeep.plugin = "cordova-plugin-zeep";
     Zeep.pluginRef = "Zeep";
     Zeep.repo = "https://github.com/vlinde/cordova-plugin-zeep.git";
-    Zeep.platforms = ["Android", "iOS"];
+    Zeep.platforms = ["Android", "iOS", "Browser"];
     Zeep.decorators = [
         { type: core$1.Injectable }
     ];
